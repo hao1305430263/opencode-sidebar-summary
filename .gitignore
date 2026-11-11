@@ -1,2 +1,13 @@
 node_modules/
 *.log
+
+# Never commit local credentials or OpenCode runtime config
+.env
+.env.*
+*.key
+*.pem
+service.json
+auth.json
+credentials*
+opencode.json
+cli.json

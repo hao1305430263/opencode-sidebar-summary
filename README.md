@@ -197,6 +197,15 @@ opencode-sidebar-summary/
   tsconfig.json
 ```
 
+## 安全说明
+
+- 本插件**不包含任何 API Key、密码或访问令牌**。它通过 OpenCode 服务端的
+  `generate.text` 接口调用你已经配置好的 provider；凭据保存在 OpenCode 的全局配置中
+  （例如 `~/.config/opencode/opencode.json`、`service.json`），不会进入本仓库。
+- 摘要缓存位于 `~/.local/state/opencode/latest/tui/`，也不在本仓库内。
+- `.gitignore` 已忽略 `node_modules/`、`.env*`、`service.json`、`*.key`、`*.pem` 等常见敏感文件。
+- 如果要把本仓库公开，发布前仍建议执行一次 `git grep -i -E "api[_-]?key|password|secret|token"` 自查。
+
 ## 常见问题
 
 **侧边栏没有出现**
