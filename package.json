@@ -1,0 +1,27 @@
+{
+  "name": "opencode-sidebar-summary",
+  "version": "1.0.0",
+  "description": "OpenCode TUI sidebar recap: one-sentence Chinese summaries of user prompts, thinking, and replies.",
+  "type": "module",
+  "exports": {
+    "./tui": "./tui.tsx"
+  },
+  "files": [
+    "tui.tsx",
+    "summary.ts",
+    "README.md"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "node test/summary.test.ts"
+  },
+  "devDependencies": {
+    "@opencode/client": "2.2.7",
+    "@opencode/plugin": "2.2.7",
+    "@opencode/theme": "2.2.7",
+    "@opentui/core": "0.8.1",
+    "@opentui/solid": "0.8.1",
+    "solid-js": "1.9.17",
+    "typescript": "5.9.3"
+  }
+}
